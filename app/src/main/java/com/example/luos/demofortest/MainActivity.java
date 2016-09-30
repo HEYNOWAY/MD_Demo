@@ -40,9 +40,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initDatas();
         init();
-
-        //加入toolbar
-
     }
 
     private void initDatas() {
@@ -76,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         mTabLayout.setupWithViewPager(mViewpager);
 
         mDarwerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
-
         //关联toolbar和DrawerLayou
         mDarwerToggle = new ActionBarDrawerToggle(this,mDarwerLayout,toolbar,
                 R.string.drawer_open,R.string.drawer_close){
@@ -93,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
         mNavigationView = (NavigationView) findViewById(R.id.navigation_view);
         setupDrawContent(mNavigationView);
-
 
     }
 

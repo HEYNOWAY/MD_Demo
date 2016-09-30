@@ -21,7 +21,6 @@ public class ContentActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private ImageView mImageView;
     private CollapsingToolbarLayout collapsingToolbar;
-    private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private NewsBean news;
 
@@ -65,8 +64,6 @@ public class ContentActivity extends AppCompatActivity {
 
     private void  setupAdapter(ViewPager mViewPager) {
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(ContentFragment.newInstance(news.getContent()),null);
-        adapter.addFragment(ContentFragment.newInstance(news.getContent()),null);
         adapter.addFragment(ContentFragment.newInstance(news.getContent()),null);
         mViewPager.setAdapter(adapter);
     }
